@@ -1,0 +1,491 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5AFFB594-1D83-4EFD-B932-44FBE2ACF972}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>nopAdapter</RootNamespace>
+    <AssemblyName>nopAdapter</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataManagement.Designer.cs">
+      <DependentUpon>DataManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ghalebConnectionHandler\EntityAbstracts\IGenericRepo.cs" />
+    <Compile Include="ghalebConnectionHandler\EntityAbstracts\IView_5.cs" />
+    <Compile Include="ghalebConnectionHandler\EntityMethods\GenericRepo.cs" />
+    <Compile Include="ghalebConnectionHandler\EntityMethods\View_5Repository.cs" />
+    <Compile Include="ghalebConnectionHandler\EntityModels\GenericRepoModel.cs" />
+    <Compile Include="ghalebConnectionHandler\EntityModels\View_5Model.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IAclRecord.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IActivityLog.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IActivityLogType.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IAddress.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IAddressAttribute.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IAddressAttributeValue.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IAddresses.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IAffiliate.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IBackInStockSubscription.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IBlogComment.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IBlogPost.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\ICampaign.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\ICategories.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\ICategory.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\ICategoryTemplate.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\ICheckoutAttribute.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\ICheckoutAttributeValue.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\ICostumers.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\ICountry.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\ICreditCards.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\ICrossSellProduct.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\ICurrency.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\ICustomer.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\ICustomerAddresses.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\ICustomerAttribute.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\ICustomerAttributeValue.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\ICustomerPassword.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\ICustomerRole.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\ICustomer_CustomerRole_Mapping.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IDeliveryDate.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IDiscount.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IDiscountRequirement.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IDiscountUsageHistory.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IDiscount_AppliedToCategories.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IDiscount_AppliedToManufacturers.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IDiscount_AppliedToProducts.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IDownload.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IEmailAccount.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IExternalAuthenticationRecord.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IForums_Forum.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IForums_Group.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IForums_Post.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IForums_PostVote.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IForums_PrivateMessage.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IForums_Subscription.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IForums_Topic.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IGdprConsent.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IGdprLog.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IGenericAttribute.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IGiftCard.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IGiftCardUsageHistory.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\ILanguage.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\ILocaleStringResource.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\ILocalizedProperty.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\ILog.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IManufacturer.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IManufacturerTemplate.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IMeasureDimension.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IMeasureWeight.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IMessageTemplate.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IMigrationVersionInfo.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\INews.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\INewsComment.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\INewsLetterSubscription.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IOrder.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IOrderItem.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IOrderNote.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IPermissionRecord.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IPermissionRecord_Role_Mapping.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IPicture.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IPictureBinary.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IPoll.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IPollAnswer.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IPollVotingRecord.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IPredefinedProductAttributeValue.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IProduct.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IProductAttribute.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IProductAttributeCombination.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IProductAttributeValue.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IProductAvailabilityRange.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IProductReview.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IProductReviewHelpfulness.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IProductReview_ReviewType_Mapping.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IProducts.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IProductTag.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IProductTemplate.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IProductWarehouseInventory.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IProduct_Category_Mapping.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IProduct_Manufacturer_Mapping.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IProduct_Picture_Mapping.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IProduct_ProductAttribute_Mapping.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IProduct_ProductTag_Mapping.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IProduct_SpecificationAttribute_Mapping.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IQueuedEmail.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IRecurringPayment.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IRecurringPaymentHistory.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IRelatedProduct.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IReturnRequest.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IReturnRequestAction.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IReturnRequestReason.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IReviewType.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IRewardPointsHistory.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\ISaleItems.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\ISales.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IScheduleTask.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\ISearchTerm.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\ISetting.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IShipment.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IShipmentItem.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IShippingByWeightByTotalRecord.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IShippingMethod.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IShippingMethodRestrictions.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IShoppingCartItem.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IShoppingCartItems.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IShoppingCarts.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\ISpecificationAttribute.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\ISpecificationAttributeGroup.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\ISpecificationAttributeOption.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IStateProvince.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IStockQuantityHistory.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IStore.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IStoreMapping.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IStorePickupPoint.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\ITaxCategory.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\ITaxRate.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\ITierPrice.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\ITopic.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\ITopicTemplate.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IUrlRecord.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IVendor.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IVendorAttribute.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IVendorAttributeValue.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IVendorNote.cs" />
+    <Compile Include="nopConnectionHandler\EntityAbstracts\IWarehouse.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\AclRecordRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\ActivityLogRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\ActivityLogTypeRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\AddressAttributeRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\AddressAttributeValueRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\AddressesRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\AddressRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\AffiliateRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\BackInStockSubscriptionRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\BlogCommentRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\BlogPostRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\CampaignRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\CategoriesRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\CategoryRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\CategoryTemplateRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\CheckoutAttributeRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\CheckoutAttributeValueRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\CostumersRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\CountryRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\CreditCardsRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\CrossSellProductRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\CurrencyRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\CustomerAddressesRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\CustomerAttributeRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\CustomerAttributeValueRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\CustomerPasswordRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\CustomerRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\CustomerRoleRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\Customer_CustomerRole_MappingRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\DeliveryDateRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\DiscountRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\DiscountRequirementRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\DiscountUsageHistoryRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\Discount_AppliedToCategoriesRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\Discount_AppliedToManufacturersRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\Discount_AppliedToProductsRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\DownloadRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\EmailAccountRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\ExternalAuthenticationRecordRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\Forums_ForumRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\Forums_GroupRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\Forums_PostRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\Forums_PostVoteRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\Forums_PrivateMessageRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\Forums_SubscriptionRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\Forums_TopicRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\GdprConsentRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\GdprLogRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\GenericAttributeRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\GiftCardRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\GiftCardUsageHistoryRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\LanguageRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\LocaleStringResourceRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\LocalizedPropertyRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\LogRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\ManufacturerRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\ManufacturerTemplateRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\MeasureDimensionRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\MeasureWeightRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\MessageTemplateRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\MigrationVersionInfoRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\NewsCommentRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\NewsLetterSubscriptionRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\NewsRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\OrderItemRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\OrderNoteRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\OrderRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\PermissionRecordRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\PermissionRecord_Role_MappingRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\PictureBinaryRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\PictureRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\PollAnswerRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\PollRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\PollVotingRecordRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\PredefinedProductAttributeValueRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\ProductAttributeCombinationRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\ProductAttributeRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\ProductAttributeValueRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\ProductAvailabilityRangeRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\ProductRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\ProductReviewHelpfulnessRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\ProductReviewRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\ProductReview_ReviewType_MappingRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\ProductsRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\ProductTagRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\ProductTemplateRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\ProductWarehouseInventoryRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\Product_Category_MappingRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\Product_Manufacturer_MappingRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\Product_Picture_MappingRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\Product_ProductAttribute_MappingRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\Product_ProductTag_MappingRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\Product_SpecificationAttribute_MappingRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\QueuedEmailRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\RecurringPaymentHistoryRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\RecurringPaymentRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\RelatedProductRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\ReturnRequestActionRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\ReturnRequestReasonRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\ReturnRequestRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\ReviewTypeRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\RewardPointsHistoryRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\SaleItemsRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\SalesRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\ScheduleTaskRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\SearchTermRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\SettingRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\ShipmentItemRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\ShipmentRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\ShippingByWeightByTotalRecordRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\ShippingMethodRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\ShippingMethodRestrictionsRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\ShoppingCartItemRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\ShoppingCartItemsRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\ShoppingCartsRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\SpecificationAttributeGroupRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\SpecificationAttributeOptionRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\SpecificationAttributeRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\StateProvinceRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\StockQuantityHistoryRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\StoreMappingRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\StorePickupPointRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\StoreRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\TaxCategoryRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\TaxRateRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\TierPriceRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\TopicRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\TopicTemplateRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\UrlRecordRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\VendorAttributeRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\VendorAttributeValueRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\VendorNoteRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\VendorRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityMethods\WarehouseRepository.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\AclRecordModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\ActivityLogModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\ActivityLogTypeModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\AddressAttributeModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\AddressAttributeValueModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\AddressesModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\AddressModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\AffiliateModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\BackInStockSubscriptionModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\BlogCommentModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\BlogPostModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\CampaignModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\CategoriesModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\CategoryModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\CategoryTemplateModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\CheckoutAttributeModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\CheckoutAttributeValueModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\CostumersModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\CountryModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\CreditCardsModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\CrossSellProductModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\CurrencyModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\CustomerAddressesModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\CustomerAttributeModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\CustomerAttributeValueModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\CustomerModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\CustomerPasswordModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\CustomerRoleModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\Customer_CustomerRole_MappingModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\DeliveryDateModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\DiscountModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\DiscountRequirementModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\DiscountUsageHistoryModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\Discount_AppliedToCategoriesModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\Discount_AppliedToManufacturersModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\Discount_AppliedToProductsModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\DownloadModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\EmailAccountModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\ExternalAuthenticationRecordModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\Forums_ForumModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\Forums_GroupModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\Forums_PostModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\Forums_PostVoteModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\Forums_PrivateMessageModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\Forums_SubscriptionModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\Forums_TopicModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\GdprConsentModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\GdprLogModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\GenericAttributeModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\GiftCardModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\GiftCardUsageHistoryModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\LanguageModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\LocaleStringResourceModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\LocalizedPropertyModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\LogModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\ManufacturerModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\ManufacturerTemplateModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\MeasureDimensionModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\MeasureWeightModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\MessageTemplateModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\MigrationVersionInfoModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\NewsCommentModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\NewsLetterSubscriptionModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\NewsModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\OrderItemModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\OrderModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\OrderNoteModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\PermissionRecordModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\PermissionRecord_Role_MappingModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\PictureBinaryModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\PictureModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\PollAnswerModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\PollModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\PollVotingRecordModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\PredefinedProductAttributeValueModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\ProductAttributeCombinationModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\ProductAttributeModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\ProductAttributeValueModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\ProductAvailabilityRangeModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\ProductModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\ProductReviewHelpfulnessModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\ProductReviewModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\ProductReview_ReviewType_MappingModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\ProductsModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\ProductTagModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\ProductTemplateModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\ProductWarehouseInventoryModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\Product_Category_MappingModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\Product_Manufacturer_MappingModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\Product_Picture_MappingModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\Product_ProductAttribute_MappingModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\Product_ProductTag_MappingModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\Product_SpecificationAttribute_MappingModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\QueuedEmailModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\RecurringPaymentHistoryModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\RecurringPaymentModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\RelatedProductModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\ReturnRequestActionModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\ReturnRequestModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\ReturnRequestReasonModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\ReviewTypeModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\RewardPointsHistoryModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\SaleItemsModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\SalesModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\ScheduleTaskModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\SearchTermModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\SettingModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\ShipmentItemModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\ShipmentModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\ShippingByWeightByTotalRecordModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\ShippingMethodModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\ShippingMethodRestrictionsModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\ShoppingCartItemModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\ShoppingCartItemsModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\ShoppingCartsModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\SpecificationAttributeGroupModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\SpecificationAttributeModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\SpecificationAttributeOptionModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\StateProvinceModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\StockQuantityHistoryModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\StoreMappingModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\StoreModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\StorePickupPointModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\TaxCategoryModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\TaxRateModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\TierPriceModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\TopicModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\TopicTemplateModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\UrlRecordModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\VendorAttributeModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\VendorAttributeValueModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\VendorModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\VendorNoteModel.cs" />
+    <Compile Include="nopConnectionHandler\EntityModels\WarehouseModel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DataManagement.resx">
+      <DependentUpon>DataManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
